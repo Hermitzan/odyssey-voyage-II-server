@@ -1,0 +1,20 @@
+rover subgraph publish flyby-4wnymr@current \
+  --schema ./monolith/schema.graphql \
+  --name monolith \
+  --routing-url http://localhost:4001
+
+
+APOLLO_KEY=service:flyby-4wnymr:kGuPIK4CLJuBjCz81pCvgA \
+rover subgraph publish flyby-4wnymr@current \
+--schema ./monolith/schema.graphql \
+--name monolith \
+--routing-url http://localhost:4001
+
+APOLLO_KEY=service:flyby-4wnymr:kGuPIK4CLJuBjCz81pCvgA APOLLO_GRAPH_REF=flyby-4wnymr@current ./router --config router-config.yaml
+
+
+
+rover subgraph publish flyby-4wnymr@current \
+--schema ./subgraph-accounts/schema.graphql \
+--name accounts \
+--routing-url http://localhost:4002
